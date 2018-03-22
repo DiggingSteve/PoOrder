@@ -362,18 +362,8 @@ export default {
 
   },
   watch:{
-    $route(){
-     //获取全部模板数据
-  this.$axios({method:'get',url:this.$store.state.publicWebApi+'api/UserTemplet',params:{logname:localStorage.getItem('usrname'),project:'bomanagement'},loading:false,tip:false}).then(results=>{
-     console.log(results.data);
-            let res=results.data;
-             this.$store.commit('setTableTmpAll',res)
-  }).catch(error=>{
 
-  })
-
-    }
-    ,
+    
     visible(value) {
       if (value) {
         document.body.addEventListener('click', this.closeMenu)
